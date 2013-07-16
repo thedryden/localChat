@@ -30,13 +30,13 @@ namespace localChat
             float sysLatDeg = (float)( (int)( this.lat + LAT_ADD ) );
             float sysLonDeg = (float)( (int)( this.lon + LON_ADD ) );
 
-            gridP += (int)( sysLatDeg / LAT_SEGMENT ) ).ToString();
+            gridP += ( (int)( sysLatDeg / LAT_SEGMENT ) ).ToString();
             gridP += ".";
-            gridP += (sysLonDeg / LON_SEGMENT)).ToString();
+            gridP += ( (int)(sysLonDeg / LON_SEGMENT) ).ToString();
 
-            gridP += ((int)(lat / LAT_SEGMENT)).ToString();
+            gridP += ((int)( ( sysLatDeg - ( LAT_SEGMENT / 2 ) ) / LAT_SEGMENT)).ToString();
             gridP += ".";
-            gridP += ((int)(lon / LON_SEGMENT)).ToString();
+            gridP += ((int)(sysLonDeg / LON_SEGMENT)).ToString();
         }
     }
 }
